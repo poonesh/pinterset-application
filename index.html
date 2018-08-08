@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pinterset</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="/static/components/image.js"></script>
+	</head>
+	<body>
+		<h2>Pinterset</h2>
+		<div id="app">
+			<image-item
+				v-for="image in images"
+				v-bind:image="image">
+			</image-item>
+		</div>
+		<script>
+			const app = new Vue({
+				el: '#app',
+			data:{
+				images:["/static/images/image1.jpg",
+					"/static/images/image2.jpg",
+					"/static/images/image3.jpg",
+					"/static/images/image4.jpg",
+					"/static/images/image5.jpg",
+					"/static/images/image6.jpg",
+					"/static/images/image7.jpg",
+					"/static/images/image8.jpg",
+					"/static/images/image9.jpg",
+					"/static/images/image10.jpg"
+				]
+			},
+
+			});	
+		</script>
+		
+	</body>
+</html>
